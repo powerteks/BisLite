@@ -1,0 +1,10 @@
+.DS_Store
+*.ai
+*.log
+*.pdf
+*.scss
+*.json
+*.sublime*
+node_modules/
+npm-debag.*
+Thumbs.db
