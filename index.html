@@ -6,67 +6,84 @@
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-  <header>
-    <ul class="main_nav">
-      <li class="main_logo"><a href="#">Bis<p class="blue_logo">Lite</p></a>
+  <header class="main_header">
+    <ul class="main_nav__list clearfix">
+      <li class="main_nav__item main_logo"><a href="#">Bis<b class="blue_logo">Lite</b></a>
       </li>
-      <li><a href="#">Home</a>
+      <li class="main_nav__item"><a href="#">Home</a>
       </li>
-      <li><a href="#">About Us</a>
+      <li class="main_nav__item"><a href="#">About Us</a>
       </li>
-      <li><a href="#">Service</a>
+      <li class="main_nav__item main_nav__services"><a href="#">Services</a>
       </li>
-      <li><a href="#">Portfolio</a>
+      <li class="main_nav__item main_nav__portfolio"><a href="#">Portfolio</a>
       </li>
-      <li><a href="#">Blog</a>
+      <li class="main_nav__item"><a href="#">Blog</a>
       </li>
-      <li><a href="#">Contact Us</a>
+      <li class="main_nav__item"><a href="#">Contact Us</a>
       </li>
     </ul>
   </header>
   <main>
     <section class="main_slader">
-      <ul>
+      <ul class="main_slide__list">
+        <input type="radio" name="slide_control" id="button_slide_1" class="slide_control">
+        <input type="radio" name="slide_control" id="button_slide_2" class="slide_control">
+        <input type="radio" name="slide_control" id="button_slide_3" class="slide_control" checked>
+        <input type="radio" name="slide_control" id="button_slide_4" class="slide_control">
+        <input type="radio" name="slide_control" id="button_slide_5" class="slide_control">
         <li class="main_slide slide_1">
-          <a href="#"></a>
+          <a href="#">
+            <img src="img/bitcoin_720.jpg" alt="">
+          </a>
         </li>
         <li class="main_slide slide_2">
-          <a href="#"></a>
+          <a href="#">
+            <img src="img/business_720.jpg" alt="">
+          </a>
         </li>
         <li class="main_slide slide_3">
-          <a href="#"></a>
+          <a href="#">
+            <img src="img/slide_coffee.jpg" alt="slide_coffee">
+          </a>
         </li>
         <li class="main_slide slide_4">
-          <a href="#"></a>
+          <a href="#">
+            <img src="img/entrepreneur_720.jpg" alt="">
+          </a>
         </li>
         <li class="main_slide slide_5">
-          <a href="#"></a>
+          <a href="#">
+            <img src="img/lamp_720.jpg" alt="">
+          </a>
         </li>
+        <div class="slider_control">
+          <label for="button_slide_1"></label>
+          <label for="button_slide_2"></label>
+          <label for="button_slide_3"></label>
+          <label for="button_slide_4"></label>
+          <label for="button_slide_5"></label>
+        </div>
       </ul>
-      <input type="radio" name="slide_control" id="button_slide_1" class="slide_control">
-      <input type="radio" name="slide_control" id="button_slide_2" class="slide_control">
-      <input type="radio" name="slide_control" id="button_slide_3" class="slide_control" checked>
-      <input type="radio" name="slide_control" id="button_slide_4" class="slide_control">
-      <input type="radio" name="slide_control" id="button_slide_5" class="slide_control">
     </section>
     <section class="quality">
-      <ul class="quality_list">
-        <li>
+      <ul class="quality_list clearfix">
+        <li class="quality_item">
           <h2 class="title_quality quality_1">Clean Theme</h2>
           <p>Ut nec lorem id orci convallis porta. Donec pharetra neque eu velit dictum molestie. Duis porta gravida augue sed viverra. Quisque at nulla leo, non aliquet mi.</p>
           <a href="#">Read More</a>
         </li>
-        <li>
+        <li class="quality_item">
           <h2 class="title_quality quality_2">Responsive Design</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi euismod placerat dui et tincidunt. Sed sollicitudin posuere auctor. Phasellus at ultricies nisl. Integer at leo eros.</p>
           <a href="#">Read More</a>
         </li>
-        <li>
+        <li class="quality_item">
           <h2 class="title_quality quality_3">Fully layerd PSD</h2>
-          <p> Phasellus lobortis metus non augue sodales volutpat. Vestibulum sit amet nibh eros, hendrerit venenatis est. In vitae nulla nec purus cursus pretium sed id magna.</p>
+          <p>Phasellus lobortis metus non augue sodales volutpat. Vestibulum sit amet nibh eros, hendrerit venenatis est. In vitae nulla nec purus cursus pretium sed id magna.</p>
           <a href="#">Read More</a>
         </li>
-        <li>
+        <li class="quality_item">
           <h2 class="title_quality quality_4">Ready for coding</h2>
           <p>Vivamus convallis feugiat mauris sed posuere. Nam rutrum, quam quis euismod commodo, elit est porta quam, non placerat eros neque porta ante. Fusce quis odio urna.</p>
           <a href="#">Read More</a>
