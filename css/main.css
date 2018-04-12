@@ -68,24 +68,26 @@ body {
   position: absolute;
   bottom: 5px;
   right: -18px;
-  width: 7px;
-  height: 5px;
-  background: url(../img/down_arrow.svg) center no-repeat; }
+  width: 5px;
+  height: 7px;
+  background: url(../img/arrow.svg) no-repeat;
+  background-size: cover;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg); }
 
 .main_slader {
-  overflow: hidden;
+  margin: 0;
   background-color: #81e4ed; }
 
 .main_slide__list {
   margin: 0 auto;
-  padding: 20px 0 0;
+  padding: 20px 0 2px;
   width: 1000px;
   list-style: none; }
 
 .main_slide {
   width: 1000px;
   height: 440px;
-  overflow: hidden;
   background-size: cover; }
 
 .main_slide img {
@@ -96,8 +98,7 @@ body {
   display: none; }
 
 .slider_control {
-  margin: 4px auto 2px;
-  overflow: hidden;
+  margin: 4px auto 0;
   width: 160px; }
 
 .slider_control label {
@@ -127,12 +128,12 @@ body {
   background-color: #ffffff; }
 
 .quality {
-  overflow: hidden;
+  margin: 0;
   background-color: #e8ebf1; }
 
 .quality_list {
   margin: 0 auto;
-  padding: 60px 0 50px;
+  padding: 60px 0 45px;
   width: 1000px;
   list-style: none; }
 
@@ -181,4 +182,41 @@ body {
   left: 3px;
   width: 5px;
   height: 7px;
-  background: url(../img/right_arrow.svg) center no-repeat; }
+  background: url(../img/arrow.svg) no-repeat;
+  background-size: cover;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg); }
+
+.works {
+  margin: 0 auto;
+  width: 1000px; }
+
+.works_title {
+  border-bottom: 1px solid #dfe1e5; }
+
+.works_title h2 {
+  padding: 11px 10px 0 40px;
+  float: left;
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: url(../img/works_arrow.svg) 2px 7px no-repeat; }
+
+.works_buttons {
+  padding-top: 21px;
+  float: right; }
+
+.works_button {
+  width: 20px;
+  height: 20px;
+  border: none;
+  border-radius: 50%;
+  background: #81e4ed url(../img/arrow.svg) 6px 5px no-repeat;
+  text-indent: 200%;
+  white-space: nowrap;
+  overflow: hidden; }
+
+.button_next {
+  margin-left: 6px;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg); }
