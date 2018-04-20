@@ -76,7 +76,6 @@ body {
           transform: rotate(-90deg); }
 
 .main_slader {
-  margin: 0;
   background-color: #81e4ed; }
 
 .main_slide__list {
@@ -86,11 +85,19 @@ body {
   list-style: none; }
 
 .main_slide {
+  position: relative;
   width: 1000px;
   height: 440px;
-  background-size: cover; }
+  overflow: hidden; }
+
+.main_slide a {
+  position: absolute;
+  width: 100%;
+  height: 700px;
+  top: 100%; }
 
 .main_slide img {
+  margin-top: -50%;
   width: 100%;
   height: auto; }
 
@@ -128,7 +135,6 @@ body {
   background-color: #ffffff; }
 
 .quality {
-  margin: 0;
   background-color: #e8ebf1; }
 
 .quality_list {
@@ -143,7 +149,7 @@ body {
   width: 220px; }
 
 .quality_item:last-child {
-  margin-right: -0px;
+  margin-right: 0;
   float: right; }
 
 .title_quality {
@@ -190,6 +196,9 @@ body {
 .works {
   border-top: 1px solid #d9d9d9; }
 
+.works input {
+  display: none; }
+
 .works_title {
   margin: 0 auto;
   width: 1000px;
@@ -204,10 +213,25 @@ body {
   background: url(../img/works_arrow.svg) 2px 7px no-repeat; }
 
 .works_buttons {
-  padding-top: 21px;
+  display: none;
+  position: absolute;
+  top: -40px;
+  right: -5px;
   float: right; }
 
 .works_button {
+  margin-right: 4px;
+  position: relative;
+  visibility: hidden;
+  width: 20px;
+  height: 20px; }
+
+.works_button::after {
+  content: "";
+  visibility: visible;
+  position: absolute;
+  top: 0;
+  right: 0;
   width: 20px;
   height: 20px;
   border: none;
@@ -217,12 +241,13 @@ body {
   white-space: nowrap;
   overflow: hidden; }
 
-.button_next {
+.button_next::after {
   margin-left: 6px;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg); }
 
 .works_list {
+  position: relative;
   margin: 0 auto;
   width: 1000px;
   padding: 20px 0 34px;
@@ -231,21 +256,12 @@ body {
 
 .example_works {
   position: relative;
-  margin-right: 40px;
-  float: left; }
+  margin-right: 37px;
+  display: none; }
 
 .example_works img {
   width: 220px;
   height: 160px; }
-
-.example_4 {
-  margin-right: 0;
-  float: right; }
-
-.example_5,
-.example_6,
-.example_7 {
-  display: none; }
 
 .work_links {
   visibility: hidden;
@@ -272,6 +288,59 @@ body {
   width: 20px;
   height: 25px;
   background: url(../img/work_link.svg) no-repeat; }
+
+#work_board_1:checked ~ .example_1,
+#work_board_2:checked ~ .example_2,
+#work_board_3:checked ~ .example_3,
+#work_board_4:checked ~ .example_4,
+#work_board_5:checked ~ .example_5 {
+  display: inline-block; }
+
+#work_board_1:checked ~ .example_2,
+#work_board_2:checked ~ .example_3,
+#work_board_3:checked ~ .example_4,
+#work_board_4:checked ~ .example_5,
+#work_board_5:checked ~ .example_6,
+#work_board_7:checked ~ .example_1 {
+  display: inline-block; }
+
+#work_board_1:checked ~ .example_3,
+#work_board_2:checked ~ .example_4,
+#work_board_3:checked ~ .example_5,
+#work_board_4:checked ~ .example_6,
+#work_board_5:checked ~ .example_7,
+#work_board_6:checked ~ .example_1,
+#work_board_7:checked ~ .example_2 {
+  display: inline-block; }
+
+#work_board_1:checked ~ .example_4,
+#work_board_2:checked ~ .example_5,
+#work_board_3:checked ~ .example_6,
+#work_board_4:checked ~ .example_7,
+#work_board_5:checked ~ .example_1,
+#work_board_6:checked ~ .example_2,
+#work_board_7:checked ~ .example_3 {
+  display: inline-block;
+  margin-right: 0;
+  float: right; }
+
+#work_board_6:checked ~ .example_6,
+#work_board_7:checked ~ .example_7 {
+  display: inline-block;
+  float: left; }
+
+#work_board_6:checked ~ .example_7 {
+  display: inline-block;
+  float: left; }
+
+#work_board_1:checked ~ .works_1,
+#work_board_2:checked ~ .works_2,
+#work_board_3:checked ~ .works_3,
+#work_board_4:checked ~ .works_4,
+#work_board_5:checked ~ .works_5,
+#work_board_6:checked ~ .works_6,
+#work_board_7:checked ~ .works_7 {
+  display: block; }
 
 .recommendation {
   margin: 20px auto;
@@ -439,6 +508,7 @@ body {
 
 .bottom_footer {
   margin: 0 auto;
+  padding-bottom: 45px;
   width: 1000px; }
 
 .copyright {
@@ -450,7 +520,7 @@ body {
   line-height: 18px; }
 
 .bottom_footer .main_logo {
-  margin: 16px 0 0; }
+  margin: 16px 0 10px; }
 
 .bottom_footer a {
   float: right; }
