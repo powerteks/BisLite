@@ -16,8 +16,7 @@ body {
   clear: both; }
 
 .main_header {
-  background: #e8ebf1;
-  border-bottom: solid 1px #6ec2ca; }
+  background: #e8ebf1; }
 
 .main_nav__list {
   margin: 0 auto;
@@ -28,6 +27,10 @@ body {
 .main_nav__item {
   padding: 11px 41px 14px 9px;
   float: left; }
+
+.main_nav__item:last-child {
+  padding: 11px 19px 14px 9px;
+  float: right; }
 
 .main_nav__item:hover,
 .main_nav__item:last-child:hover {
@@ -64,10 +67,6 @@ body {
   font-weight: normal;
   color: #2aacc8; }
 
-.main_nav__item:last-child {
-  padding: 11px 19px 14px 9px;
-  float: right; }
-
 .main_nav__services,
 .main_nav__portfolio {
   position: relative; }
@@ -101,7 +100,7 @@ body {
   min-width: 185px;
   padding: 10px 6px 10px;
   list-style: none;
-  background-color: #fff;
+  background-color: #ffffff;
   border-bottom: 5px solid #2aacc8;
   z-index: 2; }
 
@@ -112,7 +111,7 @@ body {
   font-size: 13px;
   font-weight: lighter;
   line-height: 1;
-  color: #000; }
+  color: #000000; }
 
 .sub_services__item:last-child,
 .sub_portfolio__item:last-child {
@@ -128,8 +127,9 @@ body {
 .main_nav__portfolio:hover .sub_portfolio__item:hover a {
   color: #2aacc8; }
 
-.main_slader {
-  background-color: #81e4ed; }
+.main_slider {
+  background-color: #81e4ed;
+  border-top: solid 1px #6ec2ca; }
 
 .main_slide__list {
   margin: 0 auto;
@@ -138,6 +138,7 @@ body {
   list-style: none; }
 
 .main_slide {
+  display: none;
   position: relative;
   margin: 0;
   width: 1000px;
@@ -168,9 +169,6 @@ body {
   background-color: #71a3a7;
   border-radius: 50%;
   cursor: pointer; }
-
-.main_slide {
-  display: none; }
 
 #button_slide_1:checked ~ .slide_1,
 #button_slide_2:checked ~ .slide_2,
@@ -476,10 +474,7 @@ body {
 
 .explore h2,
 .browse h2 {
-  padding: 0 30px; }
-
-.explore h2,
-.browse h2 {
+  padding: 0 30px;
   margin: 27px 0 5px; }
 
 .explore_list,
@@ -492,6 +487,7 @@ body {
 
 .explore_list a,
 .browse_list a {
+  color: #000000;
   text-decoration: none; }
 
 .browse {
@@ -564,7 +560,7 @@ body {
   width: 1000px; }
 
 .copyright {
-  margin-top: -7px;
+  margin-top: 10px;
   float: left;
   width: 645px; }
 
@@ -578,4 +574,105 @@ body {
   float: right; }
 
 .bottom_footer .main_logo {
-  float: right; }
+  float: right;
+  margin-right: -2px; }
+
+/*portfolio_page*/
+.all_works {
+  margin: 0 auto;
+  width: 1000px; }
+
+.all_works h1 {
+  padding: 31px 40px 0;
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: url(../img/paint_brush.svg) -2px 27px no-repeat; }
+
+.menu_filters {
+  padding: 15px 0;
+  list-style: none;
+  border-top: 1px solid #dfe1e5;
+  border-bottom: 1px solid #dfe1e5; }
+
+.menu_filters__item {
+  padding: 5px 17px 4px 18px;
+  float: left; }
+
+.menu_filters__item a {
+  color: #000000;
+  text-decoration: none; }
+
+.active_page {
+  background: #81e4ed; }
+
+.page_works {
+  padding: 7px 0 7px;
+  list-style: none; }
+
+.portfolio_example {
+  float: left;
+  padding: 20px 20px 18px;
+  width: 220px;
+  height: 162px; }
+
+.portfolio_example:first-child,
+.portfolio_example:nth-child(5),
+.portfolio_example:nth-child(9),
+.portfolio_example:nth-child(13) {
+  padding-left: 0; }
+
+.portfolio_example:nth-child(4),
+.portfolio_example:nth-child(8),
+.portfolio_example:nth-child(12),
+.portfolio_example:last-child {
+  float: right;
+  padding-right: 0; }
+
+.nav_pages {
+  margin: 0 auto;
+  padding: 30px 0 40px 2px;
+  width: 240px;
+  list-style: none; }
+
+.nav_pages_item {
+  float: left;
+  margin-right: 4px;
+  padding: 5px 10px 3px 10px; }
+
+.nav_pages_item a {
+  color: #000000;
+  text-decoration: none; }
+
+.last_page,
+.next_page {
+  width: 7px;
+  height: 18px;
+  background: #e8ebf1; }
+
+.last_page a,
+.next_page a {
+  position: relative;
+  visibility: hidden; }
+
+.next_page {
+  margin-left: 20px; }
+
+.last_page a::after {
+  content: "";
+  position: absolute;
+  visibility: visible;
+  top: 2px;
+  left: -2px;
+  width: 12px;
+  height: 9px;
+  background: url(../img/last_page_arrow.svg) no-repeat; }
+
+.next_page a::after {
+  content: "";
+  position: absolute;
+  visibility: visible;
+  top: 2px;
+  width: 6px;
+  height: 9px;
+  background: url(../img/page_arrow.svg) no-repeat; }
