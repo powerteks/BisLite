@@ -611,23 +611,27 @@ body {
   list-style: none; }
 
 .portfolio_example {
+  position: relative;
   float: left;
-  padding: 20px 20px 18px;
+  margin: 20px 40px 18px 0;
   width: 220px;
   height: 162px; }
 
-.portfolio_example:first-child,
-.portfolio_example:nth-child(5),
-.portfolio_example:nth-child(9),
-.portfolio_example:nth-child(13) {
-  padding-left: 0; }
+.portfolio_example:nth-child(3),
+.portfolio_example:nth-child(7),
+.portfolio_example:nth-child(11),
+.portfolio_example:nth-child(15) {
+  margin-right: 0; }
 
 .portfolio_example:nth-child(4),
 .portfolio_example:nth-child(8),
 .portfolio_example:nth-child(12),
 .portfolio_example:last-child {
   float: right;
-  padding-right: 0; }
+  margin-right: 0; }
+
+.portfolio_example:hover .work_links {
+  visibility: visible; }
 
 .nav_pages {
   margin: 0 auto;
@@ -676,3 +680,97 @@ body {
   width: 6px;
   height: 9px;
   background: url(../img/page_arrow.svg) no-repeat; }
+
+/*contact_us_page*/
+.contact_page {
+  margin: 32px auto;
+  width: 1000px; }
+
+.contact_page h1 {
+  padding: 11px 10px 1px 40px;
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: url(../img/email.svg) 0 13px no-repeat; }
+
+.contact {
+  border-top: #dfe1e5 1px solid; }
+
+.feadback {
+  padding-top: 23px;
+  float: left;
+  line-height: 18px;
+  width: 570px;
+  letter-spacing: 0.45px; }
+
+.feadback a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #2aacc8; }
+
+.feadback p {
+  margin-bottom: 28px; }
+
+.feadback input {
+  margin-top: 5px;
+  margin-bottom: 35px; }
+
+.feadback textarea {
+  margin-top: 5px; }
+
+.feadback_button {
+  margin: 23px 0 7px -2px;
+  width: 160px;
+  height: 60px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
+  text-transform: uppercase;
+  background: linear-gradient(#81e4ed, #2aacc8) #2aacc8;
+  border: #2aacc8 1px solid;
+  border-radius: 6px; }
+
+.feadback_button p {
+  display: block;
+  position: relative;
+  margin: 3px 0 0 27px; }
+
+.feadback_button p::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -14px;
+  width: 25px;
+  height: 25px;
+  background: url(../img/button_arrow.svg) no-repeat;
+  z-index: 5; }
+
+.location {
+  margin-right: 22px;
+  padding-top: 40px;
+  width: 340px;
+  float: right; }
+
+.map {
+  padding: 20px 20px 15px 20px;
+  background-color: #e8fcfe;
+  border: #81e4ed 1px solid; }
+
+.map p {
+  margin: 0 0 0 -2px;
+  font-weight: bold; }
+
+.frame_map {
+  margin-top: 23px;
+  height: 190px;
+  border: #ffffff 5px solid; }
+
+.adress h3 {
+  margin-top: 33px;
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase; }
+
+.adress p {
+  margin-bottom: 16px;
+  line-height: 17px; }
