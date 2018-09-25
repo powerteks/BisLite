@@ -713,8 +713,14 @@ body {
   color: #000000;
   text-decoration: none; }
 
+.menu_filters__item a:hover {
+  color: #2aacc8;
+  text-shadow: 0 0 3px #8C8C8C; }
+
 .active_page {
-  background: #81e4ed; }
+  background: #81e4ed;
+  pointer-events: none;
+  cursor: default; }
 
 .page_works {
   padding: 7px 0 7px;
@@ -757,6 +763,10 @@ body {
   margin-right: 4px;
   padding: 5px 10px 3px 10px; }
 
+.nav_pages_item a:hover {
+  color: #2aacc8;
+  text-shadow: 0 0 3px #8C8C8C; }
+
 .nav_pages_item a {
   color: #000000;
   text-decoration: none; }
@@ -793,6 +803,18 @@ body {
   width: 6px;
   height: 9px;
   background: url(../img/page_arrow.svg) no-repeat; }
+
+.last_page:hover,
+.next_page:hover {
+  width: 7px;
+  height: 18px;
+  background: #d9d9d9; }
+
+.last_page:hover a::after,
+.next_page:hover a::after {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  transition: .3s; }
 
 /*contact_us_page*/
 .contact_page {
