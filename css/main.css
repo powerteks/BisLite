@@ -103,7 +103,6 @@ body {
 
 .main_nav__services:hover .sub_services__menu,
 .main_nav__portfolio:hover .sub_portfolio__menu {
-  visibility: visible;
   -webkit-transform: rotateX(0deg);
           transform: rotateX(0deg); }
 
@@ -124,7 +123,6 @@ body {
 
 .sub_services__menu,
 .sub_portfolio__menu {
-  visibility: hidden;
   position: absolute;
   display: block;
   left: -1px;
@@ -141,7 +139,7 @@ body {
   -webkit-transform-origin: top;
           transform-origin: top;
   transition: .3s;
-  z-index: 2; }
+  z-index: 111130; }
 
 .sub_services__menu::after,
 .sub_portfolio__menu::after {
@@ -152,7 +150,7 @@ body {
   width: 101%;
   height: 5px;
   background-color: #2aacc8;
-  z-index: 2; }
+  z-index: 30; }
 
 .sub_services__item,
 .sub_portfolio__item {
@@ -190,17 +188,23 @@ body {
 
 .main_slide__list {
   margin: 0 auto;
+  position: relative;
   padding: 19px 0 2px;
+  height: auto !important;
   width: 1000px;
   list-style: none; }
 
 .main_slide {
-  display: none;
-  position: relative;
   margin: 0;
+  position: absolute;
+  top: 19px;
+  left: 0;
   width: 1000px;
   height: 440px;
-  overflow: hidden; }
+  overflow: hidden;
+  transition: opacity 2s, z-index 2s;
+  opacity: 0;
+  z-index: 0; }
 
 .main_slide a {
   position: absolute;
@@ -223,22 +227,29 @@ body {
   margin: 7px;
   width: 14px;
   height: 14px;
-  background-color: #71a3a7;
+  background: #71a3a7;
   border-radius: 50%;
   cursor: pointer; }
+
+.slide_3 {
+  top: 0;
+  position: relative; }
 
 #button_slide_1:checked ~ .slide_1,
 #button_slide_2:checked ~ .slide_2,
 #button_slide_3:checked ~ .slide_3,
 #button_slide_4:checked ~ .slide_4,
 #button_slide_5:checked ~ .slide_5 {
-  display: block; }
+  transition: 3s;
+  opacity: 1;
+  z-index: 1; }
 
 #button_slide_1:checked ~ .slider_control label:nth-child(1),
 #button_slide_2:checked ~ .slider_control label:nth-child(2),
 #button_slide_3:checked ~ .slider_control label:nth-child(3),
 #button_slide_4:checked ~ .slider_control label:nth-child(4),
 #button_slide_5:checked ~ .slider_control label:nth-child(5) {
+  transition: .7s;
   background-color: #ffffff; }
 
 .quality {
@@ -267,16 +278,16 @@ body {
   text-transform: uppercase; }
 
 .quality_1 {
-  background: url(../img/pencil.svg) 0 0 no-repeat; }
+  background: url(../img/pencil.svg) no-repeat; }
 
 .quality_2 {
-  background: url(../img/fullscreen.svg) 0 0 no-repeat; }
+  background: url(../img/fullscreen.svg) no-repeat; }
 
 .quality_3 {
-  background: url(../img/view_list.svg) 0 0 no-repeat; }
+  background: url(../img/view_list.svg) no-repeat; }
 
 .quality_4 {
-  background: url(../img/plane.svg) 0 0 no-repeat; }
+  background: url(../img/plane.svg) no-repeat; }
 
 .quality_item p {
   margin: 13px 0 20px; }
@@ -346,11 +357,8 @@ body {
   right: 0;
   width: 20px;
   height: 20px;
-  border: none;
   border-radius: 50%;
   background: #81e4ed url(../img/arrow.svg) 6px 5px no-repeat;
-  text-indent: 200%;
-  white-space: nowrap;
   overflow: hidden; }
 
 .button_next::after {
@@ -367,10 +375,11 @@ body {
   box-shadow: 0 -2px 3px #8C8C8C; }
 
 .works_list {
-  position: relative;
   margin: 0 auto;
-  width: 1000px;
   padding: 20px 0 34px;
+  position: relative;
+  /*for works_buttons*/
+  width: 1000px;
   list-style: none;
   border-bottom: 1px solid #dfe1e5; }
 
@@ -408,7 +417,6 @@ body {
 .work_link::after {
   content: "";
   position: absolute;
-  display: block;
   top: 18px;
   left: 13px;
   width: 35px;
@@ -843,7 +851,8 @@ body {
   box-shadow: 0 2px 5px -2px #000000;
   transition: .3s; }
 
-.feadback_button::before {
+.feadback_button::before,
+.feadback_button::after {
   position: absolute;
   content: "";
   top: -1px;
@@ -855,21 +864,12 @@ body {
   border-radius: 6px;
   box-shadow: 0 3px 18px -3px #000000;
   opacity: 0;
-  z-index: 2; }
+  z-index: 2;
+  transition: .3s; }
 
 .feadback_button::after {
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(#2aacc8, #2aacc8);
-  border: #2aacc8 1px solid;
-  border-radius: 6px;
   box-shadow: 0 5px 30px 2px #ffffff;
-  opacity: 0;
-  z-index: 2; }
+  transition: 0s; }
 
 .feadback_button p {
   display: block;
@@ -888,7 +888,8 @@ body {
 
 .feadback_button:hover {
   -webkit-transform: translateY(-2px);
-          transform: translateY(-2px); }
+          transform: translateY(-2px);
+  transition: .3s; }
 
 .feadback_button:hover::before {
   opacity: 1; }
